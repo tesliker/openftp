@@ -1,0 +1,29 @@
+.container {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 5rem;
+}
+
+.container a {
+  font-size: 1.4rem;
+}
+
+.editor {
+  background-color: #fff;
+  width: 100%;
+  min-height: 300px;
+}
+
+.notClickable {
+	color: #B0B0B0;
+}
+
+.clickable {
+	color: #000;
+	cursor: pointer;
+}
