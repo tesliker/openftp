@@ -3,18 +3,22 @@ import { Link } from 'react-router-dom';
 import styles from './CredentialsForm.css';
 
 class CredentialsForm extends Component {
-  props: {
-    host: () => void,
-    port: () => void,
-    username: () => void,
-    password: () => void,
-  };
+  constructor(props) {
+    super(props);
+  }
 
   render() {
-    const { host, port, username, password } = this.props;
+    let loginForm = null;
+    if (this.props.token == null) {
+      loginForm = <form className="login-form" onSubmit={this.props.submitAction}>
+        <input class="usernameInput" type="text" ref="usernameInput" />
+        <input type="password" ref="password" />
+        <input type="submit" ref="submit" />
+      </form>;
+    }
     return (
       <div>
-      	<input type="text" value={host} />
+        {loginForm}
       </div>
     );
   }
